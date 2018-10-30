@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    var global_tpl 
+    $('#render-div').hide()
+    $('#dagain').hide()
+    $("select").imagepicker({
+      hide_select : false,
+      show_label : true
+         selected : function() {
+             global_tpl = $(this).val()
+          }
+     })
+
     $('#btn_get_rec').click(function() {
         uid_val = $('#ipt-uid').val()
 		console.log(uid_val);

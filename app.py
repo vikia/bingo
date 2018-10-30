@@ -31,13 +31,28 @@ def get_cache(key):
         return None
     return item
 
-@app.route('/demo')
-def serve_demo():
-    return render_template('demo.html')
+@app.route('/pintu')
+def serve_pintu():
+    return render_template('pintu.htm')
+
+@app.route('/color_picker')
+def serve_xise():
+    return render_template('xise.htm')
 
 @app.route('/demo-v2')
 def serve_demo_v2():
     return render_template('demo-v2.html')
+
+@app.route('/bingo_url')
+def serve_bingo_url():
+    args = "".join(request.url.split('?')[1:])
+    print args
+    server = 'http://127.0.0.1:8088/bingo/?'
+    img_url = server + args
+    print img_url
+    resp = {"img":img_url}
+
+    return json.jsonify(resp)
 
 @app.route('/bingo')
 def serve_bingo():
@@ -45,12 +60,20 @@ def serve_bingo():
 
 @app.route('/grabcut', methods = ['POST', 'GET'])
 def serve_grabcut():
-    url = request.args.get('img', '')
-    print url
-    cutter = GrabCutter()
-    img = cutter.process(url)
+    return render_template('grabcut.htm')
 
-    return Response(img, mimetype="image/jpeg")
+@app.route('/filters')
+def serve_filters():
+    return render_template('filters.htm')
+
+#@app.route('/grabcut', methods = ['POST', 'GET'])
+#def serve_grabcut():
+#    url = request.args.get('img', '')
+#    print url
+#    cutter = GrabCutter()
+#    img = cutter.process(url)
+#
+#    return Response(img, mimetype="image/jpeg")
 
 @app.route('/get-userids', methods = ['POST', 'GET'])
 def get_old_user():
