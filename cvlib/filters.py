@@ -17,7 +17,7 @@ requests.packages.urllib3.disable_warnings()
 
 from grabcut import TimeTracer
 
-class OldSchoolFilter(object):
+class Filter(object):
 
     __errno_cut_succ = 0
 
@@ -74,9 +74,11 @@ class OldSchoolFilter(object):
 
         return rgb_img
 
-    def _filter2(self, img):
+    def _filter3(self, img):
+        print "in _filter2"
         if img is None:
             logging.warn('img none!')
+            print('img none!')
 
         rgb_img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
         print rgb_img.shape
@@ -103,7 +105,7 @@ class OldSchoolFilter(object):
 
         return rgb_img
 
-    def _filter3(self, img):
+    def _filter2(self, img):
         if img is None:
             logging.warn('img none!')
 
@@ -132,15 +134,21 @@ class OldSchoolFilter(object):
 
         return rgb_img
 
-    def process(self, url):
+    def process(self, url, stra=1):
         img = self._read_remote_img(url)
-        res_img = self._filter2(img)
+        res_img = None
+        if stra == 1:
+            res_img = self._filter(img)
+        elif stra == 2:
+            res_img = self._filter2(img)
+        elif stra == 3:
+            res_img = self._filter3(img)
 
-        cv.imshow('filter', res_img)
-        cv.waitKey(0)
-        cv.destroyAllWindows()
-        return
-
+        # cv.imshow('filter', res_img)
+        # cv.waitKey(0)
+        # cv.destroyAllWindows()
+        # return
+        print "WFJ here"
 
         # 临时文件,讲ndarray转成字节流
         tmp = tempfile.NamedTemporaryFile(suffix='.jpeg')
@@ -148,11 +156,10 @@ class OldSchoolFilter(object):
 
         return tmp.read()
 
-
 if __name__ == "__main__":
     logging.basicConfig(level = logging.DEBUG, \
                     format = '%(asctime)s - %(levelname)s - %(message)s', \
                     datefmt = '%Y/%m/%d %H:%M:%S')
 
-    flt = OldSchoolFilter() 
+    flt = Filter() 
     flt.process("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1161149267,3646555459&fm=26&gp=0.jpg")

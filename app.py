@@ -9,6 +9,7 @@ import logging
 import datetime
 
 from cvlib.grabcut import GrabCutter
+from cvlib.filters import Filter
 
 app = Flask(__name__)
 
@@ -46,10 +47,11 @@ def serve_demo_v2():
 @app.route('/bingo_url')
 def serve_bingo_url():
     args = "".join(request.url.split('?')[1:])
-    print args
-    server = 'http://127.0.0.1:8088/bingo/?'
+    # print args
+    # server = 'http://127.0.0.1:8088/bingo/?'
+    server = 'http://45.63.58.127:8088/bingo/?'
     img_url = server + args
-    print img_url
+    # print img_url
     resp = {"img":img_url}
 
     return json.jsonify(resp)
@@ -65,6 +67,27 @@ def serve_grabcut():
 @app.route('/filters')
 def serve_filters():
     return render_template('filters.htm')
+
+@app.route('/req-filters')
+def serve_req_filters():
+    args = "".join(request.url.split('?')[1:])
+    # print args
+    # server = 'http://127.0.0.1:3389/real-filters?'
+    server = 'http://45.63.58.127:3389/real-filters?'
+    img_url = server + args
+    # print img_url
+    resp = {"img":img_url}
+    return json.jsonify(resp)
+
+@app.route('/real-filters')
+def serve_real_filters():
+   url = request.args.get('img', '')
+   # print url
+   stra = int(request.args.get('stra'))
+   flt = Filter() 
+   img = flt.process(url, stra)
+
+   return Response(img, mimetype="image/jpeg")
 
 #@app.route('/grabcut', methods = ['POST', 'GET'])
 #def serve_grabcut():

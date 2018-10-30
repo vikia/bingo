@@ -53,6 +53,9 @@ $(document).ready(function() {
         } else if ($('#markopt').attr('width') == 2) {
             ftpl = '2.zip'
         }
+        } else if ($('#markopt').attr('width') == 3) {
+            ftpl = '3.zip'
+        }
 
         $.ajax({
             //url: 'ad-rec',

@@ -53,9 +53,9 @@
               <ul class="nav navbar-nav">
                 <li><a href="./bingo">主页</a></li>
                 <li><a href="./pintu">动态拼图</a></li>
-                <li class="active"><a href="./color_picker">吸色换色</a></li>
-                <li><a href="#">智能抠图</a></li>
-                <li><a href="#">图像滤镜</a></li>
+                <li><a href="./color_picker">吸色换色</a></li>
+                <li><a href="./grabcut">智能抠图</a></li>
+                <li class="active"><a href="./filters">图像滤镜</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -78,8 +78,8 @@
         <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
         <div class="container">
           <div class="carousel-caption">
-            <h1>吸色换色</h1>
-              <p>不止千人千面，我们想给的是千人万面</p>
+            <h1>百变滤镜</h1>
+              <p>是时候给你的商品图片来点不一样的特效了</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">开始体验</a></p>
           </div>
         </div>
@@ -94,87 +94,56 @@
     <div class="container">
       <div class="slider-wrapper theme-default">
         <div id="slider1" class="nivoSlider">   
-            <img src="./static/img/xise1.jpeg" alt="" title="" />
-            <img src="./static/img/xise2.jpeg" alt="" title="" />
-            <img src="./static/img/xise3.jpeg" alt="" title="" />
-            <img src="./static/img/xise4.jpeg" alt="" title="" />
+            <img src="./static/img/filter.jpg" alt="" title="" />
+            <img src="./static/img/filter1.png" alt="" title="" />
+            <img src="./static/img/filter2.png" alt="" title="" />
+            <img src="./static/img/filter3.png" alt="" title="" />
         </div> 
         <div id="htmlcaption1" class="nivo-html-caption">     
-            <strong>吸色换色模板展示</a>. 
+            <strong>滤镜展示</a>. 
         </div>
       </div>
 
       <div class="page-header">
-        <h1>第一步，选择一个模板</h1>
+        <h1>第一步，选择滤镜</h1>
       </div>
 
 	  <form class="form-horizontal">
 	  <select class="image-picker show-html">
-		 <option id="opt1" data-img-src="./static/img/xise1.jpeg" data-img-alt="Page 3"
-         data-img-class="last" value="1">吸色模板1</option>
+		 <option id="opt1" data-img-src="./static/img/filter1.png" data-img-alt="Page 3"
+         data-img-class="last" value="1">怀旧风格</option>
+		 <option id="opt1" data-img-src="./static/img/filter2.png" data-img-alt="Page 3"
+         data-img-class="last" value="2">熔铸风格</option>
+		 <option id="opt1" data-img-src="./static/img/filter3.png" data-img-alt="Page 3"
+         data-img-class="last" value="3">冰冻+模糊风格</option>
 	  </select>
 	  </select>
       <img id="markopt" class="sr-only">
 
         <div class="page-header">
-          <h1>第二步，填写动态文案</h1>
-        </div>
-
-	    <div class="form-group">
-		  <label for="inputEmail3" class="col-sm-2 control-label">文案一</label>
-		  <div class="col-sm-10">
-		    <input type="text" class="form-control" id="ipt-title1"
-            placeholder="进口生鲜双十一购物节">
-		  </div>
-		</div>
-
-	    <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">文案二</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="ipt-title2"
-            placeholder="佳沛官方旗舰店新西兰奇异果礼盒">
-          </div>
-	    </div>
-
-	    <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">活动语</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="ipt-title3"
-            placeholder="满199减80 满299减120">
-          </div>
-	    </div>
-
-        <div class="page-header">
-          <h1>第三步，填写logo及商品主体图片，商品或风景图均可</h1>
+          <h1>第二步，填写图片url</h1>
         </div>
 
         <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">logo图url</label>
+          <label for="inputPassword3" class="col-sm-2 control-label">图片url</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="ipt-logo" placeholder="http://pic.90sjimg.com/design/00/69/49/81/58fd695ae5ebf.png">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">商品url</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="ipt-item" placeholder="http://i2.qhimg.com/t015afa829a2b8d2427.png">
+            <input type="text" class="form-control" id="ipt-item" placeholder="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1161149267,3646555459&fm=26&gp=0.jpg">
           </div>
         </div>
 
         <div class="page-header">
-          <h1>第四步，设置完成</h1>
+          <h1>第三步，设置完成</h1>
         </div>
 
 	    <div class="form-group" id="f2hide">
-          <label for="inputPassword3" class="col-sm-2 control-label">点击提交后端渲染</label>
+          <label for="inputPassword3" class="col-sm-2 control-label">点击提交后端处理</label>
           <div class="col-sm-10" style="padding-bottom:20px">
-            <button type="button" class="btn btn-success" id="btn_render">开始拼图</button>
+            <button type="button" class="btn btn-success" id="btn_render">开始处理</button>
           </div>
         </div>
 
      <div class="form-group text-center" id="render-div">
-       <h1><font color="green">拼图成功！结果如下</font></h1>
+       <h1><font color="green">处理成功！结果如下...</font></h1>
        <img id="render-res">
      </div>
 
@@ -205,7 +174,7 @@
     <script src="./static/resource/image-picker.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./static/resource/ie10-viewport-bug-workaround.js"></script>
-    <script src="./static/js/xise.js"></script>
+    <script src="./static/js/filters.js"></script>
 
     <script type="text/javascript"> 
       $(window).on('load', function() {
