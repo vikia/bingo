@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./static/resource/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./static/resource/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./static/resource/ie-emulation-modes-warning.js"></script>  
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="./static/resource/carousel.css" rel="stylesheet">
+    <link href="./static/resource/nivo-slider.css" rel="stylesheet">
+    <link href="./static/resource/default.css" rel="stylesheet">
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Bingo Design</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">主页</a></li>
+                <li><a href="#">动态拼图</a></li>
+                <li><a href="#">吸色换色</a></li>
+                <li><a href="#">智能抠图</a></li>
+                <li><a href="#">图像滤镜</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">我们</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">其他</li>
+                    <li><a href="#">友情链接</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item next left">
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Bingo Design</h1>
+              <p>工业级的智能图片创意工具，让你的广告不再千篇一律，每一次的创意展现都独一无二，万里挑一。</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">了解更多</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Bingo Design</h1>
+              <p>裁图抠图累成狗？大促节日双11各种活动角标、logo替换到手残？告别低效单调的PS工作，解放UE生产力，让UE回归纯粹的设计，剩下的交给机器。</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">了解更多</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item active left">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Bingo Design</h1>
+              <p>你们想要的千人千面，其实很简单。无论是根据商品主体自动吸色，还是根据年龄性别自动换色，或是根据点击率预估优选创意模板，在这里，只是一行配置。</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">了解更多</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-3">
+          <img class="img-circle" src="./static/img/pintu2.jpeg" alt="Generic placeholder image" width="200" height="130">
+          <h2>动态拼图</h2>
+          <p>一套模板，千人千面。根据环境设备、地理位置、时间节日、用户画像等动态渲染创意图片和文案，解放UE生产力，告别繁琐无趣的调整尺寸、位置、文案。</p>
+          <p><a class="btn btn-primary" href="#" role="button">尝试一下 »</a></p>
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+          <img class="img-circle" src="./static/img/xise2.jpeg" alt="Generic placeholder image" width="200" height="130">
+          <h2>吸色换色</h2>
+          <p>一套模板，千人万面。无论你有多大规模的商品SKU，我们都能根据商品主体，自动吸取主色调，动态替换模板背景（组件元素）颜色，无须任何人为干预。</p>
+          <p><a class="btn btn-primary" href="#" role="button">尝试一下 »</a></p>
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+          <img class="img-circle" src="./static/img/koutu6.jpeg" alt="Generic placeholder image" width="200" height="130">
+          <h2>智能抠图</h2>
+          <p>告别PhotoShop手动抠图，深度学习自动抠图，让商品主体和你的模板融为一体，天衣无缝。</p>
+          <p><a class="btn btn-primary" href="#" role="button">尝试一下 »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img class="img-circle" src="./static/img/filter2.png" alt="Generic placeholder image" width="200" height="130">
+          <h2>图像滤镜</h2>
+          <p>美图秀秀能给你的，机器也能做，而且更快更智能。</p>
+          <p><a class="btn btn-primary" href="#" role="button">尝试一下 »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-6">
+          <h2 class="featurette-heading">告别繁琐劳动，回归设计本身-<span class="text-muted">设计一次，处处生成</span></h2>
+          <p class="lead">UE只需关注模板设计，Bingo Design提供后续sketch文件导入、模板管理、实时模板优选和组装、实时图层拼接和动态渲染等一站式服务。</p>
+        </div>
+        <div class="col-md-6">
+          <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">     
+                <img src="./static/img/pintu1.jpeg" alt="" title="" />
+                <img src="./static/img/pintu2.jpeg" alt="" title="" />
+                <img src="./static/img/pintu3.jpeg" alt="" title="" />
+                <img src="./static/img/pintu4.jpeg" alt="" title="" />
+                <img src="./static/img/pintu5.jpeg" alt="" title="" />
+                <img src="./static/img/pintu6.jpeg" alt="" title="" />
+                <img src="./static/img/pintu7.jpeg" alt="" title="" />    
+            </div> 
+            <div id="htmlcaption" class="nivo-html-caption">     
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-6 col-md-push-6">
+          <h2 class="featurette-heading">会自动变色的创意-<span class="text-muted">更多色彩，更懂用户，更精准触达</span></h2>
+          <p class="lead">厌倦了让你的用户看一成不变的广告？还在纠结使用小粉红还是性冷淡的色系？不必取舍，鱼和熊掌都可兼得。让你的模板里每一个组件动起来，都能拥有鲜活的色彩。</p>
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <div class="slider-wrapper theme-default">
+            <div id="slider2" class="nivoSlider">   
+                <img src="./static/img/xise1.jpeg" alt="" title="" />
+                <img src="./static/img/xise2.jpeg" alt="" title="" />
+                <img src="./static/img/xise3.jpeg" alt="" title="" />
+                <img src="./static/img/xise4.jpeg" alt="" title="" />
+            </div> 
+            <div id="htmlcaption2" class="nivo-html-caption">     
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-6">
+          <h2 class="featurette-heading">智能抠图-<span class="text-muted">一键抠图，天衣无缝。</span></h2>
+          <p class="lead">一键抠图，让你商品图片和模板融为一体，再也不用担心讨厌的白边，不用担心模板和主体生硬和割裂，模板开始拥有无限种可能。</p>
+        </div>
+        <div class="col-md-6">
+            <div class="slider-wrapper theme-default">
+                <div id="slider3" class="nivoSlider">
+                    <img src="./static/img/koutu6.jpeg" alt="" title="" />
+                    <img src="./static/img/pintu1.jpeg" alt="" title="" />
+                    <img src="./static/img/koutu5.jpeg" alt="" title="" />
+                    <img src="./static/img/koutu7.jpeg" alt="" title="" />   
+                    <img src="./static/img/koutu1.jpg" alt="" title="" />    
+                    <img src="./static/img/koutu2.jpg" alt="" title="" />
+                    <img src="./static/img/koutu4.jpg" alt="" title="" />     
+                </div>
+                <div id="htmlcaption3" class="nivo-html-caption">     
+                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+          <div class="col-md-6 col-md-push-6">
+            <h2 class="featurette-heading">百变滤镜-<span class="text-muted">一张图片，百变滤镜。</span></h2>
+            <p class="lead">百变滤镜，为你的商品图片添加各种黑魔法，冷冰冰的SKU也可以变得很有趣。</p>
+          </div>
+          <div class="col-md-6 col-md-pull-6">
+              <div class="slider-wrapper theme-default">
+                  <div id="slider4" class="nivoSlider">
+                      <img src="./static/img/filter.jpg" alt="" title="" />
+                      <img src="./static/img/filter1.png" alt="" title="" />
+                      <img src="./static/img/filter2.png" alt="" title="" />
+                      <img src="./static/img/filter3.png" alt="" title="" />   
+                  </div>
+                  <div id="htmlcaption4" class="nivo-html-caption">     
+                      <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+                  </div>
+              </div>
+          </div>
+        </div>
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">回到顶部</a></p>
+        <p>© 2018 Bingo Studio. · <a href="#">版权</a> · <a href="#">联系我们</a></p>
+
+    </footer></div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./static/resource/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./static/resource/bootstrap.min.js"></script>
+    <script src="./static/resource/jquery.nivo.slider.pack.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./static/resource/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./static/resource/ie10-viewport-bug-workaround.js"></script>
+
+    <script type="text/javascript"> 
+      $(window).on('load', function() {
+          $('#slider').nivoSlider(); 
+          $('#slider2').nivoSlider();
+          $('#slider3').nivoSlider();
+          $('#slider4').nivoSlider();
+      }); 
+    </script>
+  
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg></body></html>
